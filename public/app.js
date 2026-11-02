@@ -134,7 +134,7 @@ function renderDashboard() {
       </div>
     </div>
     <div class="section-title"><span class="ico">campaign</span>新着の更新情報 <a class="btn sm" href="#/items?status=new">すべて見る</a></div>
-    <div class="list">${recent.length ? recent.map(itemRow).join('') : '<div class="card flat empty"><span class="ico">inbox</span>新着はありません。「巡回する」で加盟学会サイトを確認できます。</div>'}</div>`;
+    <div class="list">${recent.length ? recent.map(i => itemRow(i)).join('') : '<div class="card flat empty"><span class="ico">inbox</span>新着はありません。「巡回する」で加盟学会サイトを確認できます。</div>'}</div>`;
   renderCrawlCard();
   bindItemRows();
 }
