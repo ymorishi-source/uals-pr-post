@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>言語系学会連合 広報支援</title>
+<meta name="theme-color" content="#FEF7FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="rail" id="rail">
+  <div class="rail-logo" title="言語系学会連合 広報支援">
+    <span class="logo-mark">U</span>
+  </div>
+  <a class="rail-item" href="#/dashboard" data-view="dashboard"><span class="ico">dashboard</span><span class="lbl">ホーム</span></a>
+  <a class="rail-item" href="#/items" data-view="items"><span class="ico">campaign</span><span class="lbl">更新情報</span><span class="badge" id="badge-new" hidden></span></a>
+  <a class="rail-item" href="#/societies" data-view="societies"><span class="ico">account_balance</span><span class="lbl">加盟学会</span></a>
+  <a class="rail-item" href="#/runs" data-view="runs"><span class="ico">history</span><span class="lbl">巡回履歴</span></a>
+  <a class="rail-item" href="#/settings" data-view="settings"><span class="ico">settings</span><span class="lbl">設定</span></a>
+</nav>
+<main id="main" class="main"><div class="loading"><div class="spinner"></div>読み込み中…</div></main>
+<div id="snackbar" class="snackbar" hidden></div>
+<dialog id="dialog" class="dialog"></dialog>
+<script src="app.js"></script>
+</body>
+</html>
