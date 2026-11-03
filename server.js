@@ -140,7 +140,7 @@ app.put('/api/items/:id', (req, res) => {
   const it = db.items.find(x => x.id === req.params.id);
   if (!it) return res.status(404).json({ error: 'not found' });
   const b = req.body || {};
-  for (const k of ['title', 'url', 'date', 'eventDate', 'category', 'summary', 'notes', 'editor', 'draft', 'newsDraft', 'postedUrl', 'postedBy', 'importance', 'societyId']) if (k in b) it[k] = b[k];
+  for (const k of ['title', 'url', 'date', 'eventDate', 'category', 'summary', 'notes', 'editor', 'draft', 'newsDraft', 'postedUrl', 'postedBy', 'postedAt', 'importance', 'societyId']) if (k in b) it[k] = b[k];
   if (b.status && STATUSES.includes(b.status)) {
     it.status = b.status;
     if (b.status === 'posted') { it.postedAt = it.postedAt || new Date().toISOString(); }
